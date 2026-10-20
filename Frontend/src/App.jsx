@@ -20,8 +20,7 @@ export default function App() {
           <div className="hero__content">
             <p className="eyebrow"><span /> DEVELOPER LOG AGGREGATION</p>
             <h1 id="hero-title">Coming<br /><span>soon.</span></h1>
-            <p className="hero__description">Less log hunting. More time building.</p>
-            <p className="hero__detail">Search logs from every deployment in one calm, clear workspace.</p>
+            <p className="hero__description">Search logs from every deployment in one calm, clear workspace</p>
             <a className="hero__cta" href="https://x.com/Deepakmyside" target="_blank" rel="noreferrer">
               Follow updates <span aria-hidden="true">↗</span>
             </a>
