@@ -10,7 +10,8 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev"
+    "db:migrate": "prisma migrate dev",
+    "type":"commonjs"
   },
   "keywords": [],
   "author": "",
