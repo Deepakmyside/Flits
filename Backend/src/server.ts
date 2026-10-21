@@ -1,9 +1,18 @@
-import dotenv from "dotenv";
-dotenv.config();
-import app from "./app"
+import express from "express";
+import cors from "cors";
+import helmet from "helmet";
+import healthRoutes from "./routes/health.routes";
+import {env} from "./config/env";
 
-const PORT = Number(process.env.PORT) || 3000;
+const app = express();
 
-app.listen(PORT, () => {
-    console.log(`Flit API is running on port ${PORT}`); 
-}); 
+app.use(helmet());
+app.use(cors());
+app.use(express.json());
+
+app.use("/api/health", healthRoutes);
+
+app.listen(env.port, ()=> {
+    console.log(`Flit backend running on port ${env.port}`);
+     
+});
