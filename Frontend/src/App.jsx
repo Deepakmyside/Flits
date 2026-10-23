@@ -38,6 +38,17 @@ export default function App() {
             <p className="eyebrow"><span /> THE SIGNAL, WITHOUT THE NOISE</p>
             <h2 id="logs-title">Every deploy.<br /><em>One log stream.</em></h2>
             <p>Search, filter, and follow issues across every environment from one focused view.</p>
+            <div className="logs-signup">
+              <label className="logs-signup__label" htmlFor="signup-email">Get launch updates</label>
+              <input
+                id="signup-email"
+                type="email"
+                name="email"
+                autoComplete="email"
+                placeholder="you@example.com"
+                aria-label="Email address for launch updates"
+              />
+            </div>
           </div>
           <div className="log-window" aria-label="Preview of the Flit log dashboard">
           <div className="log-window__top">
