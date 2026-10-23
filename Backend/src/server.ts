@@ -4,6 +4,7 @@ import helmet from "helmet";
 import healthRoutes from "./routes/health.routes";
 import {env} from "./config/env";
 import authRoutes from "./routes/auth.routes";
+
 const app = express();
 
 app.use(helmet());

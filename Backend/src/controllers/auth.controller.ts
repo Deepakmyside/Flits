@@ -1,5 +1,6 @@
 import type { Request, Response as ExpressResponse} from "express";
 import { signupUser, loginUser } from "../services/auth.service";
+import { AuthRequest } from "../middlewares/auth.middleware";
 import { signupSchema, loginSchema } from "../validators/auth.validator";
 import { AppError } from "../utils/app-error";
 
@@ -34,6 +35,16 @@ export async function login(req: Request, res:  ExpressResponse) {
     } catch(error) {
         handleError(error, res);
     }
+}
+
+export async function getMe(
+    req: AuthRequest,
+    res:ExpressResponse
+){
+    res.status(200).json({
+        success: true,
+        user: req.user
+    })
 }
 function handleError(error: unknown, res: ExpressResponse) {
     if(error instanceof AppError) {
